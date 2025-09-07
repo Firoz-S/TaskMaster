@@ -1,0 +1,128 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --muted: #94a3b8;
+  --text: #e5e7eb;
+  --accent: #60a5fa;
+  --ok: #22c55e;
+  --danger: #f43f5e;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(180deg, #0b1223, #0f172a);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.container {
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  min-height: 300px;
+  width: 400px;
+  max-width: 90vw;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 28px;
+  color: #f0f0f0;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+#todoinput {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 8px 0 0 8px;
+  border: none;
+  outline: none;
+  background-color: #1f2937;
+  color: #e5e7eb;
+  font-size: 16px;
+}
+
+#add-task-btn {
+  padding: 12px 20px;
+  border-radius: 0 8px 8px 0;
+  border: none;
+  background-color: #3b82f6;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#todoinput::placeholder {
+  color: #94a3b8;
+}
+
+#add-task-btn:hover {
+  background-color: #2563eb;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;
+  color: #e5e7eb;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+#todo-list li span {
+  flex: 1;
+}
+
+#todo-list li.completed span {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+#todo-list li button {
+  background-color: #ef4444;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+#todo-list li button:hover {
+  background-color: #b91c1c;
+}
