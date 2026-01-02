@@ -1,5 +1,3 @@
-console.log("inside server.js");
-
 require("dotenv").config();
 
 const express = require("express");
